@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
         procps \
         libsqlite3-dev \
         zlib1g-dev \
+        libzip-dev \
 
     && docker-php-ext-install pdo_mysql pdo_sqlite mysqli gd json zip opcache \
     && EXPECTED_COMPOSER_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig) \
