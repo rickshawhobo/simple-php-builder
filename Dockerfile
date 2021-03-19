@@ -1,4 +1,4 @@
-FROM php:7.2.4-fpm
+FROM php:7.2.5-fpm
 
 RUN apt-get update && apt-get install -y \
         apt-utils \
