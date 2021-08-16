@@ -2,17 +2,18 @@ FROM php:7.4.16-fpm
 
 RUN apt-get update && apt-get install -y \
         apt-utils \
-        supervisor \
-        nginx \
+        git \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
         libpng-dev \
-        wget \
-        procps \
         libsqlite3-dev \
-        zlib1g-dev \
         libzip-dev \
+        nginx \
+        procps \
+        supervisor \
+        wget \
+        zlib1g-dev \
 
     && docker-php-ext-install pdo_mysql pdo_sqlite mysqli gd json zip opcache \
     && EXPECTED_COMPOSER_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig) \
